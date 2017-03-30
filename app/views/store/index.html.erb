@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Produkte store</h1>
+<% @products.each do |product| %>
+<div class="entry">
+	<%= image_tag(product.image_url) %>
+	<h2><%= product.title %></h2>
+	<%= sanitize(product.description) %>
+	<div class="price_line">
+		<span class="price"><%= product.price %></span>
+	</div>
+</div>
+<% end %>
