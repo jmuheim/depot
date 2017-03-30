@@ -14,10 +14,12 @@ length: 80) %></dd>
 </dl>
 </td>
 <td class="list_actions">
-<%= link_to 'Ansehen', product %><br/>
-<%= link_to 'Editieren', edit_product_path(product) %><br/>
-<%= link_to 'Löschen', product, method: :delete,
-data: { confirm: 'Sind Sie sicher?' } %>
+  <ul>
+    <li><%= link_to 'Ansehen', product %></li>
+    <li><%= link_to 'Editieren', edit_product_path(product) %></li>
+    <li><%= link_to 'Löschen', product, method: :delete,
+data: { confirm: 'Sind Sie sicher?' } %></li>
+  </ul>
 </td>
 </tr>
 <% end %>
