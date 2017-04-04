@@ -9,16 +9,14 @@
 <td class="list_description">
 <dl>
 <dt><%= product.title %></dt>
-<dd><%= truncate(strip_tags(product.description),
-length: 80) %></dd>
+<dd><%= truncate(strip_tags(product.description), length: 80) %></dd>
 </dl>
 </td>
 <td class="list_actions">
   <ul>
     <li><%= link_to 'Ansehen', product %></li>
     <li><%= link_to 'Editieren', edit_product_path(product) %></li>
-    <li><%= link_to 'Löschen', product, method: :delete,
-data: { confirm: 'Sind Sie sicher?' } %></li>
+    <li><%= link_to 'Löschen', product, method: :delete, data: { confirm: 'Sind Sie sicher?' } %></li>
   </ul>
 </td>
 </tr>
