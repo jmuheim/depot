@@ -13,5 +13,4 @@ class ApplicationController < ActionController::Base
 		def set_date_loaded
 			@date_loaded = Time.now
 		end
-
 end
