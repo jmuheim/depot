@@ -1,6 +1,6 @@
 class CombineItemsInCart < ActiveRecord::Migration[5.0]
-	
-  def up
+
+	def up
     Cart.all.each do |cart|
       sums = cart.line_items.group(:product_id).sum(:quantity)
 
@@ -18,7 +18,7 @@ class CombineItemsInCart < ActiveRecord::Migration[5.0]
 
   def down
     LineItem.where("quantity>1").each do |line_item|
-      line_item.quantity.times do 
+      line_item.quantity.times do
         LineItem.create(
           cart_id: line_item.cart_id,
           product_id: line_item.product_id,

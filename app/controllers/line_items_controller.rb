@@ -7,10 +7,6 @@ class LineItemsController < ApplicationController
     @line_items = LineItem.all
   end
 
-	def line_item_params
-		params.require(:line_item).permit(:product_id)
-	end
-	
   def show
   end
 
@@ -27,8 +23,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @line_item.cart,
-          notice: 'Line item was successfully created.' }
+        format.html { redirect_to @line_item.cart }
         format.json { render :show,
           status: :created, location: @line_item }
       else
@@ -61,8 +56,11 @@ class LineItemsController < ApplicationController
 
   private
 
-	def set_line_item
-		@line_item = LineItem.find(params[:id])
-	end
+    def set_line_item
+      @line_item = LineItem.find(params[:id])
+    end
 
+    def line_item_params
+      params.require(:line_item).permit(:product_id)
+    end
 end
