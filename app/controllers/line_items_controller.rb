@@ -7,6 +7,10 @@ class LineItemsController < ApplicationController
     @line_items = LineItem.all
   end
 
+	def line_item_params
+		params.require(:line_item).permit(:product_id)
+	end
+	
   def show
   end
 
@@ -61,8 +65,4 @@ class LineItemsController < ApplicationController
 		@line_item = LineItem.find(params[:id])
 	end
 
-	def line_item_params
-		params.require(:line_item).permit(:product_id, :cart_id)
-	end
-  #...
 end
