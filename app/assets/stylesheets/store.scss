@@ -14,7 +14,7 @@
 /* An entry in the store catalog */
 .entry {
 	overflow: auto;
-	margin-top: 1em;
+	margin-top: 1.5rem;
 	border-bottom: 1px dotted #77d;
 	min-height: 100px;
 	img {
@@ -35,8 +35,8 @@
 
 	p, div.price_line {
 		margin-left: 120px;
-		margin-top: 0.5em;
-		margin-bottom: 0.8em;
+		margin-top: .5rem;
+		margin-bottom: 1rem;
 	}
 	form, div {
 		display: inline;
@@ -44,7 +44,7 @@
 	.price {
 		color: #44a;
 		font-weight: bold;
-		margin-right: 3em;
+		margin-right: 3rem;
  	}
 	}
 }
