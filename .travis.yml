@@ -4,3 +4,9 @@ rvm:
 script:
   - bin/rails db:migrate RAILS_ENV=test
   - bin/rails test
+notifications:
+  email:
+    recipients:
+      - joshua.muheim@access-for-all.ch
+    on_failure: change
+    on_success: change
